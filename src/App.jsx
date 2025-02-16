@@ -8,13 +8,13 @@ const App = () => {
     const [count, setCount] = useState(0);
 
     // Используем useCallback, чтобы не пересоздавать функции
-   const increment = () => {
+   const increment = useCallback(() => {
         setCount((prev) => prev + 1);
-   };
+   },[]);
 
     const handleClick = useCallback(() => {
         console.log("✅ Button clicked");
-    }, []);
+    },[]);
 
     return (
         <div style={{ textAlign: "center", marginTop: "20px" }}>

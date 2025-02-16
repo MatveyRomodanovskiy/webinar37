@@ -1,7 +1,10 @@
+
+
+// eslint-disable-next-line react/display-name,react/prop-types
 import React from "react";
 
 // eslint-disable-next-line react/display-name,react/prop-types
-const Counter = (({ count, onIncrement }) => {
+const Counter = React.memo(({ count, onIncrement }) => {
     console.log("🔄 Counter rendered");
     return (
         <div>
